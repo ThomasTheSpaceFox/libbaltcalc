@@ -82,13 +82,6 @@ def btdiv(numA, numB):
 	decRes=(numAcon // numBcon)
 	btRes=(DECTOBT(decRes))
 	return(btRes)
-
-def btdivclass(numA, numB):
-	numAcon=BTTODEC(numA)
-	numBcon=BTTODEC(numB)
-	decRes=(numAcon // numBcon)
-	btRes=(DECTOBT(decRes))
-	return(btRes)
 btdev=btdiv
 
 def mpi(tritlen):
