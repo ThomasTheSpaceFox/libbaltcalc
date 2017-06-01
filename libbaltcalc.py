@@ -178,7 +178,10 @@ class btint:
 		if type(stringint) is int:
 			self.intval=stringint
 		else:
-			self.intval=BTTODEC(str(stringint))
+			try:
+				self.intval=stringint.dec()
+			except AttributeError:
+				self.intval=BTTODEC(str(stringint))
 	def __str__(self):
 		return DECTOBT(self.intval)
 	def __int__(self):
@@ -187,24 +190,29 @@ class btint:
 		return self.intval
 	def bt(self):
 		return DECTOBT(self.intval)
+	#addition
 	def __add__(self, other):
-		return btint(btadd(self.bt(), other.bt()))
+		return btint((self.dec() + other.dec()))
+	#subtraction
 	def __sub__(self, other):
-		return btint(btsub(self.bt(), other.bt()))
+		return btint((self.dec() - other.dec()))
+	#division
 	def __truediv__(self, other):
-		return btint(btdivclass(self.bt(), other.bt()))
+		return btint((self.dec() // other.dec()))
 	def __div__(self, other):
-		return btint(btdivclass(self.bt(), other.bt()))
+		return btint((self.dec() // other.dec()))
 	def __floordiv__(self, other):
-		return btint(btdivclass(self.bt(), other.bt()))
+		return btint((self.dec() // other.dec()))
+	#multiplication
 	def __mul__(self, other):
-		return btint(btmul(self.bt(), other.bt()))
+		return btint((self.dec() * other.dec()))
+	#others
 	def __abs__(self):
-		return btint(DECTOBT(abs(self.intval)))
+		return btint(abs(self.intval))
 	def __neg__(self):
-		return btint(DECTOBT( - self.intval))
+		return btint( - self.intval)
 	def __pos__(self):
-		return btint(DECTOBT( + self.intval))
+		return btint( + self.intval)
 	def __invert__(self):
 		return btint(BTINVERT(DECTOBT(self.intval)))
 	def invert(self):
