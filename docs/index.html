@@ -1,7 +1,6 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>libbaltcalc documentation - index</title>
   </head>
@@ -16,11 +15,14 @@
     </p>
     <h2>Links:</h2>
     <p><a href="https://thomasthespacefox.github.io/SBTCVM-Mark-2/">SBTCVM
+
         project. A balanced ternary virtual machine</a><br>
       <a href="https://github.com/ThomasTheSpaceFox/libbaltcalc">libbaltcalc
+
         on github</a><br>
       <a
 href="https://lepvulpestech.blogspot.com/p/lessons-in-balanced-ternary.html">LepVulpes'
+
 
 
         Page on balanced ternary</a><br>
@@ -66,6 +68,51 @@ href="https://lepvulpestech.blogspot.com/p/lessons-in-balanced-ternary.html">Lep
     </p>
     <p><br>
     </p>
+    <h2>functions:</h2>
+    <p><i>(mpi, mni, and mcv expect and return decimal integers)</i><br>
+    </p>
+    <p><tt>mpi(tritlen) returns the max positive integer of a length of
+        trits</tt><tt><br>
+      </tt></p>
+    <p><tt>mni(</tt><tt>tritlen) returns the max negative integer of a
+        length of trits</tt><tt><br>
+      </tt></p>
+    <p><tt>mcv(tritlen) returns the max combinations value of a length
+        of trits</tt><br>
+    </p>
+    <h3>Low Level Balanced ternary integer string operations<br>
+    </h3>
+    <p><i>It is recommended to usually use the high level btint object
+        such operations.</i><br>
+    </p>
+    <p><tt>BTTODEC(btintstring)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp; &nbsp; returns value of a balance ternary integer (in
+        string form) as a decimal integer</tt><tt><br>
+      </tt></p>
+    <p><tt>DECTOBT(integer)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp; returns a balance ternary integer (in string form)
+        equal to integer argument</tt></p>
+    <p><tt>btadd</tt><tt>(btintstring, btintstring) &nbsp; &nbsp;&nbsp;
+        addition</tt><tt><br>
+      </tt></p>
+    <p><tt>btmul</tt><tt>(btintstring, btintstring) &nbsp; &nbsp;&nbsp;
+        multiplication</tt><tt><br>
+      </tt></p>
+    <p><tt>btsub</tt><tt>(btintstring, btintstring) &nbsp; &nbsp;&nbsp;
+        subtraction</tt><tt><br>
+      </tt></p>
+    <p><tt>btdiv(</tt><tt>btintstring, </tt><tt>btintstring) &nbsp;
+        &nbsp;&nbsp; integer division. </tt><tt><br>
+      </tt></p>
+    <p><tt>btdivcpu</tt><tt>(btintstring, btintstring)&nbsp;&nbsp; (used
+        by SBTCVM project. returns "ZDIV" on zero divison</tt><tt><br>
+      </tt></p>
+    <p><tt>btdivclass(btintstring, btintstring) (used by class
+        instances)</tt></p>
+    <p><tt>BTINVERT(</tt><tt>btintstring)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (returns the inversion of a balanced ternary integer string)</tt><br>
+    </p>
+    <p> </p>
     <p><br>
     </p>
   </body>

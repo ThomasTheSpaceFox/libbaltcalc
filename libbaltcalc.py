@@ -79,11 +79,7 @@ def btdivcpu(numA, numB):
 def btdiv(numA, numB):
 	numAcon=BTTODEC(numA)
 	numBcon=BTTODEC(numB)
-	try:
-		decRes=(numAcon // numBcon)
-	except ZeroDivisionError:
-		#decRes=0
-		return "Zero Division Error"
+	decRes=(numAcon // numBcon)
 	btRes=(DECTOBT(decRes))
 	return(btRes)
 
@@ -95,7 +91,13 @@ def btdivclass(numA, numB):
 	return(btRes)
 btdev=btdiv
 
-
+def mpi(tritlen):
+	return (((3**(tritlen))-1)//2)
+def mni(tritlen):
+	return ( - ((3**(tritlen))-1)//2)
+def mcv(tritlen):
+	return (3**(tritlen))
+	
 
 
 #inverts the positive and negative numerals in a balanced ternary integer, 
